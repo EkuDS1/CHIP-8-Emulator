@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+	id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+sourceSets {
+    main {
+         java {
+            srcDirs = ['src']
+         }
+    }
+}
+
+processResources {
+	from('shaders') {into 'shaders'}
+}
+
+application {
+    mainClass = 'emulator.Main' 
+}
+
+repositories {
+	mavenCentral()
+}
+
+project.ext.lwjglVersion = "3.2.1"
+project.ext.jomlVersion = "1.10.3"
+project.ext.lwjglNatives = "natives-windows"
+
+dependencies {
+	implementation "org.lwjgl:lwjgl:$lwjglVersion"
+	implementation "org.lwjgl:lwjgl-glfw:$lwjglVersion"
+	implementation "org.lwjgl:lwjgl-opengl:$lwjglVersion"
+	implementation "org.lwjgl:lwjgl-stb:$lwjglVersion"
+	runtimeOnly "org.lwjgl:lwjgl:$lwjglVersion:$lwjglNatives"
+	runtimeOnly "org.lwjgl:lwjgl-glfw:$lwjglVersion:$lwjglNatives"
+	runtimeOnly "org.lwjgl:lwjgl-opengl:$lwjglVersion:$lwjglNatives"
+	runtimeOnly "org.lwjgl:lwjgl-stb:$lwjglVersion:$lwjglNatives"
+	implementation "org.joml:joml:${jomlVersion}"
+}
