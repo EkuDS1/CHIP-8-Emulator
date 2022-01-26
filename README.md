@@ -32,9 +32,11 @@ The learning curve for graphics libraries is quite high. And that is exactly why
 
 #### Gradle
 
-I decided to learn Gradle before Maven due to the simple syntax and helpful documentation that is available for Gradle. Once again, the learning curve here is high but I am confident that this contributes to my DevOps skills.
+I decided to learn Gradle before Maven due to the simple syntax and helpful documentation that is available for Gradle. Once again, the learning curve here is high but I am confident that this contributes to my DevOps skills. Also, isn't it nice to be able to build and/or run with single command? :)
 
 ## How to run/build
+
+### Make sure you have Java 11 or above!
 
 ### If you have gradle installed
 
