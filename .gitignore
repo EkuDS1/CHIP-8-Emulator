@@ -106,8 +106,9 @@ debug_log
 # VS Code files
 .vscode
 
-# Ignore Gradle project-specific cache directory
+# Ignore Gradle project-specific cache directory except the gradle wrapper
 .gradle
+!gradle/wrapper/gradle-wrapper.jar
 
 # Ignore Gradle build output directory
 build
